@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlinx-serialization'
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        applicationId "com.pindelia.soft.gardian"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "GARDEN_BASE_URL", "\"http://api.pindelia.com\""
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    // core dependencies
+    implementation kotlinDependencies.kotlin
+    implementation androidXDependencies.core
+    implementation androidXDependencies.appcompat
+    implementation androidXDependencies.materialDesign
+    implementation androidXDependencies.recyclerView
+    implementation androidXDependencies.annotation
+    implementation androidXDependencies.constraintLayout
+    implementation androidXDependencies.liveData
+    implementation androidXDependencies.viewModel
+
+
+    // coroutine
+    implementation kotlinDependencies.coroutines
+
+    // retrofit
+    implementation otherDependencies.retrofit
+
+    // serialization
+    implementation kotlinDependencies.serialization
+
+    testImplementation testDependencies.testUnit
+    androidTestImplementation testDependencies.androidTest
+    androidTestImplementation testDependencies.expresso
+}

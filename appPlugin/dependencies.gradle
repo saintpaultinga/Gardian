@@ -1,0 +1,74 @@
+ext {
+    versions = [
+            // android default configuration
+
+            buildTools               :'30.0.2',
+            compileSdk               :30,
+            targetSdk                :30,
+            minSdk                   :22,
+            versionCode              :1,
+            versionName              :'1.0',
+
+            // compile time dependencies
+            kotlin                   :'1.5.21',
+            gradlePlugin             :'4.2.2',
+
+            // androidx dependencies
+            androidx                 :'1.6.0',
+            materialDesign           :'1.4.0',
+            recyclerView             :'1.2.1',
+            appcompat                :'1.3.1',
+            annotation               :'1.1.0',
+            constraintLayout         :'2.0.4',
+            lifecycle                :'2.2.0',
+            
+            // kotlin dependencies
+            coroutines               :"1.3.9",
+            serialization            :"1.2.2",
+
+            // retrofit
+            retrofit                 :"2.6.0",
+
+
+
+            // test dependencies
+
+            unitTest                 :'4.13.2',
+            androidTest              :'1.1.3',
+            expressoTest             :'3.4.0'
+    ]
+
+    compileOnlyDependencies =  [
+            kotlinGradlePlugin       :"org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+            gradlePlugin             :"com.android.tools.build:gradle:${versions.gradlePlugin}",
+            serializationPlugin      :"org.jetbrains.kotlin:kotlin-serialization:${versions.kotlin}"
+
+    ]
+
+    kotlinDependencies = [
+            kotlin                   :"org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+            coroutines               :"org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}",
+            serialization            :"org.jetbrains.kotlinx:kotlinx-serialization-json:${versions.serialization}"
+    ]
+
+    androidXDependencies = [
+            core                     :"androidx.core:core-ktx:${versions.androidx}",
+            appcompat                :"androidx.appcompat:appcompat:${versions.appcompat}",
+            materialDesign           :"com.google.android.material:material:${versions.materialDesign}",
+            recyclerView             :"androidx.recyclerview:recyclerview:${versions.recyclerView}",
+            annotation               :"androidx.annotation:annotation:${versions.annotation}",
+            constraintLayout         :"androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
+            liveData                 :"androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}",
+            viewModel                :"androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
+    ]
+
+    otherDependencies = [
+            retrofit                 :"com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    ]
+
+    testDependencies = [
+            testUnit                 : "junit:junit:${versions.unitTest}",
+            androidTest              : "androidx.test.ext:junit:${versions.androidTest}",
+            expresso                 : "androidx.test.espresso:espresso-core:${versions.expressoTest}"
+    ]
+}
