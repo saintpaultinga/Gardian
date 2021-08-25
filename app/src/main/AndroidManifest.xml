@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pindelia.soft.gardian">
+    package="com.pindelia.soft.guardian">
 
     <application
+        android:name="com.pindelia.soft.guardian.GuardianApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,8 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gardian">
         <activity
-            android:name=".ui.ui.login.LoginActivity"
-            android:label="@string/title_activity_login">
+            android:name="com.pindelia.soft.guardian.ui.ui.login.LoginActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,18 +20,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ItemListActivity"
+            android:name="com.pindelia.soft.guardian.ui.ui.list.ItemListActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Gardian.NoActionBar">
         </activity>
         <activity
-            android:name=".ItemDetailActivity"
+            android:name="com.pindelia.soft.guardian.ui.ui.list.ItemDetailActivity"
             android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity"
+            android:parentActivityName="com.pindelia.soft.guardian.ui.ui.list.ItemListActivity"
             android:theme="@style/Theme.Gardian.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.pindelia.soft.gardian.ItemListActivity" />
+                android:value="com.pindelia.soft.guardian.ui.ui.list.ItemListActivity" />
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian.ui.ui.login
+package com.pindelia.soft.guardian.ui.ui.login
 
 /**
  * Data validation state of the login form.

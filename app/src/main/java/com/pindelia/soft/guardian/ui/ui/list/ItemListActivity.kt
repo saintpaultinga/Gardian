@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian
+package com.pindelia.soft.guardian.ui.ui.list
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,8 +12,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.pindelia.soft.guardian.R
 
-import com.pindelia.soft.gardian.dummy.DummyContent
+import com.pindelia.soft.guardian.dummy.DummyContent
 
 /**
  * An activity representing a list of Pings. This activity

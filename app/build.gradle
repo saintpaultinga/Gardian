@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
     id 'kotlinx-serialization'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -9,14 +11,14 @@ android {
     buildToolsVersion versions.buildTools
 
     defaultConfig {
-        applicationId "com.pindelia.soft.gardian"
+        applicationId "com.pindelia.soft.guardian"
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
         versionCode versions.versionCode
         versionName versions.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "GARDEN_BASE_URL", "\"http://api.pindelia.com\""
+        buildConfigField "String", "GUARDIAN_BASE_URL", "\"http://api.pindelia.com\""
     }
 
     buildFeatures {
@@ -29,13 +31,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_1_8
     }
+
+
 }
 
 dependencies {
@@ -51,6 +57,10 @@ dependencies {
     implementation androidXDependencies.liveData
     implementation androidXDependencies.viewModel
 
+    // Android KTX
+    implementation androidXDependencies.viewModelKtx
+    implementation "androidx.activity:activity-ktx:${versions.activityKtx}"
+
 
     // coroutine
     implementation kotlinDependencies.coroutines
@@ -60,6 +70,10 @@ dependencies {
 
     // serialization
     implementation kotlinDependencies.serialization
+
+    // dagger & Hilt
+    implementation otherDependencies.daggerHilt
+    kapt otherDependencies.daggerHiltCompiler
 
     testImplementation testDependencies.testUnit
     androidTestImplementation testDependencies.androidTest

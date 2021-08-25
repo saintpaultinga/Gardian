@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian.ui.ui.login
+package com.pindelia.soft.guardian.ui.ui.login
 
 /**
  * User details post authentication that is exposed to the UI

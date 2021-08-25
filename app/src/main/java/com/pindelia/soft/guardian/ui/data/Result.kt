@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian.ui.data
+package com.pindelia.soft.guardian.ui.data
 
 /**
  * A generic class that holds a value with its loading status.

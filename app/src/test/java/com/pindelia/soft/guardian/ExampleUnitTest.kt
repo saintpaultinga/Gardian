@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian
+package com.pindelia.soft.guardian
 
 import org.junit.Test
 

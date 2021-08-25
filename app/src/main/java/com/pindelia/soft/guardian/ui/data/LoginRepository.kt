@@ -1,6 +1,6 @@
-package com.pindelia.soft.gardian.ui.data
+package com.pindelia.soft.guardian.ui.data
 
-import com.pindelia.soft.gardian.ui.data.model.LoggedInUser
+import com.pindelia.soft.guardian.ui.data.model.LoggedInUser
 
 /**
  * Class that requests authentication and user information from the remote data source and

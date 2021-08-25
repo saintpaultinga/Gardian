@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian.ui.data.model
+package com.pindelia.soft.guardian.ui.data.model
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

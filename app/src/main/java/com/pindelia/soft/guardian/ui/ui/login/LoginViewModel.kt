@@ -1,14 +1,21 @@
-package com.pindelia.soft.gardian.ui.ui.login
+package com.pindelia.soft.guardian.ui.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.pindelia.soft.gardian.R
-import com.pindelia.soft.gardian.ui.data.LoginRepository
-import com.pindelia.soft.gardian.ui.data.Result
+import androidx.lifecycle.SavedStateHandle
+import com.pindelia.soft.guardian.R
+import com.pindelia.soft.guardian.ui.data.LoginRepository
+import com.pindelia.soft.guardian.ui.data.Result
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
+@HiltViewModel
+class LoginViewModel @Inject constructor(
+    private val savedStateHandle: SavedStateHandle,
+    private val loginRepository: LoginRepository
+    ) : ViewModel() {
 
     private val _loginForm = MutableLiveData<LoginFormState>()
     val loginFormState: LiveData<LoginFormState> = _loginForm

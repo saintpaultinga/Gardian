@@ -21,6 +21,8 @@ ext {
             annotation               :'1.1.0',
             constraintLayout         :'2.0.4',
             lifecycle                :'2.2.0',
+            viewModelKtx             :'2.3.1',
+            activityKtx              :'1.3.1',
             
             // kotlin dependencies
             coroutines               :"1.3.9",
@@ -28,6 +30,9 @@ ext {
 
             // retrofit
             retrofit                 :"2.6.0",
+
+            // dagger & hilt
+            daggerHilt               :"2.38.1",
 
 
 
@@ -41,12 +46,13 @@ ext {
     compileOnlyDependencies =  [
             kotlinGradlePlugin       :"org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
             gradlePlugin             :"com.android.tools.build:gradle:${versions.gradlePlugin}",
-            serializationPlugin      :"org.jetbrains.kotlin:kotlin-serialization:${versions.kotlin}"
+            serializationPlugin      :"org.jetbrains.kotlin:kotlin-serialization:${versions.kotlin}",
+            daggerHilt               :"com.google.dagger:hilt-android-gradle-plugin:${versions.daggerHilt}",
 
     ]
 
     kotlinDependencies = [
-            kotlin                   :"org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+            kotlin                   :"org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}",
             coroutines               :"org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}",
             serialization            :"org.jetbrains.kotlinx:kotlinx-serialization-json:${versions.serialization}"
     ]
@@ -59,11 +65,15 @@ ext {
             annotation               :"androidx.annotation:annotation:${versions.annotation}",
             constraintLayout         :"androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
             liveData                 :"androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}",
-            viewModel                :"androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
+            viewModel                :"androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
+            viewModelKtx             :"androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.viewModelKtx}",
+            activityKtx              :"androidx.activity:activity-ktx:${versions.activityKtx}"
     ]
 
     otherDependencies = [
-            retrofit                 :"com.squareup.retrofit2:retrofit:${versions.retrofit}"
+            retrofit                 :"com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            daggerHilt               :"com.google.dagger:hilt-android:${versions.daggerHilt}",
+            daggerHiltCompiler       :"com.google.dagger:hilt-compiler:${versions.daggerHilt}"
     ]
 
     testDependencies = [

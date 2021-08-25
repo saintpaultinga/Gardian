@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian
+package com.pindelia.soft.guardian
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

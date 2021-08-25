@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian
+package com.pindelia.soft.guardian.ui.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.pindelia.soft.gardian.dummy.DummyContent
+import com.pindelia.soft.guardian.R
+import com.pindelia.soft.guardian.dummy.DummyContent
 
 /**
  * A fragment representing a single Item detail screen.

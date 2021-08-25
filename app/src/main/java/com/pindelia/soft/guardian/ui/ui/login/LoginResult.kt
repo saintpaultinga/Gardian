@@ -1,4 +1,4 @@
-package com.pindelia.soft.gardian.ui.ui.login
+package com.pindelia.soft.guardian.ui.ui.login
 
 /**
  * Authentication result : success (user details) or error message.
